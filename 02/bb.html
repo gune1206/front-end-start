@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>source</title>
+    <style type="text/css">
+      #board{
+        width: 400px;
+        height: 400px;
+      }
+        .black{
+        width: 100px;
+        height: 100px;
+        float: left;
+        
+      }
+      .white{
+        width: 100px;
+        height: 100px;
+        float: left;
+      }
+    </style>
+</head>
+<body>
+
+<div id="board">
+    
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+    
+</div>
+<script>
+    var colors = ["black","white"];
+    var blacks = document.getElementsByClassName("black");
+    var whites = document.getElementsByClassName("white");
+
+    while (blacks.length > 0) {
+      blacks[0].style.backgroundColor = colors[0];
+      blacks = [].slice.call(blacks, 1);
+    }
+    while (whites.length > 0) {
+      whites[0].style.backgroundColor = colors[1];
+      whites = [].slice.call(whites, 1);
+    }
+
+</script>
+</body>
+</html>
