@@ -1,0 +1,20 @@
+
+(function()){
+
+// 박스오피스  데이터 가져오기
+var boxOfficeAPI = 'http://http://m.movie.daum.net/data/movie/movie_info/box_office.json?country=KR&startDate=20150101&endDate=20150401&pageSize=10&pageNo=1';
+var listTemplate = $('listTemplate').innerHTML;
+
+ console.log(listTemplate);
+
+ getJSON(boxOfficeAPI , function(boxOfficeData){
+
+  console.log(boxOfficeData)
+
+  var html = tmpl(listTemplate, {list: boxOfficeData.data});
+
+  $('wrap').innerHTML = html;
+
+
+});
+})();
